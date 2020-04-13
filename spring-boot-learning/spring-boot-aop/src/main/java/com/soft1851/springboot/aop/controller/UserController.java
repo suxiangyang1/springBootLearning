@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @author ysx
  */
 
-
 @RestController
 @Slf4j
 public class UserController {
@@ -19,7 +18,6 @@ public class UserController {
      * @return
      */
     @GetMapping("hello")
-    @AuthToken(role_name={"admin"})
     public String hello(String name) {
         log.info("hello()方法，无需鉴权，也无需认证，当前用户名：" + name);
         return "hello方法访问成功";
@@ -31,6 +29,7 @@ public class UserController {
      * @return
      */
     @GetMapping("user")
+    @AuthToken
     public String user(String name) {
         log.info("user()方法需要认证，当前用户名：" + name);
         return "user()方法访问成功";
@@ -44,6 +43,7 @@ public class UserController {
      * @return
      */
     @GetMapping("admin")
+    @AuthToken(role_name = {"admin","Admin"})
     public String admin(String name) {
         log.info("admin()方法需要鉴权，当前用户名：" + name);
         return "admin()方法访问成功";

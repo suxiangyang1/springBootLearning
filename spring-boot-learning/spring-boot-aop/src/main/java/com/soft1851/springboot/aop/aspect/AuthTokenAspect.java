@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletRequest;
  */
 
 @Aspect
-@Slf4j
 @Component
+@Slf4j
 public class AuthTokenAspect {
 
     /**
@@ -62,5 +62,4 @@ public class AuthTokenAspect {
             return "权限不足，无法访问";
         }
     }
-
 }
