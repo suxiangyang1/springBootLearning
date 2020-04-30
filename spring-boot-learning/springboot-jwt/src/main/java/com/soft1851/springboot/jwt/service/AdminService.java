@@ -14,7 +14,7 @@ public class AdminService {
     /**
      * 根据role获得权限
      */
-    public List<String> getPermissionByRole(String role) {
+    public List<String> getPermissionsByRole(String role) {
         Map<String,List<String>> map = new TreeMap<>();
         String[] admins = {"专辑管理","歌曲管理"};
         String[] superAdmins = {"权限管理","系统设置"};

@@ -11,6 +11,8 @@
     <modules>
         <module>spring-boot-aop</module>
         <module>springboot-jwt</module>
+        <module>spring-boot-bmp</module>
+        <module>spring-boot-oauth</module>
     </modules>
 
 

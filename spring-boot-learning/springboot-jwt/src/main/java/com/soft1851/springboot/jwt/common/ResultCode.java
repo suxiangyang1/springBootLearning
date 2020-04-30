@@ -31,6 +31,8 @@ public enum ResultCode {
     USER_SIGN_IN_FAIL(20008, "用户登录失败"),
     USER_NOT_FOUND(20009, "用户不存在"),
     USER_NO_AUTH(20019, "用户权限不足"),
+    USER_TOKEN_EXPIRES(20020,"token已经失效"),
+    ARITHMETIC_ERROR(20021,"算术异常"),
 
 
     /* 业务错误：30001-39999 */
